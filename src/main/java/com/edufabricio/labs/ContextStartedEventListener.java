@@ -1,6 +1,7 @@
 package com.edufabricio.labs;
 
 import com.edufabricio.labs.examples.CriteriaQueryMaxPeriodExample;
+import com.edufabricio.labs.examples.LazyLoadExample;
 import com.edufabricio.labs.examples.MultipleJoinBuilderExample;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
-
-import java.text.ParseException;
 
 @Component
 public class ContextStartedEventListener implements
@@ -20,6 +19,9 @@ public class ContextStartedEventListener implements
 
     @Autowired
     private CriteriaQueryMaxPeriodExample criteriaQueryMaxPeriodExample;
+
+    @Autowired
+    private LazyLoadExample lazyLoadExample;
 
     private static final Logger log = LoggerFactory.getLogger(ContextStartedEventListener.class);
 
@@ -34,9 +36,11 @@ public class ContextStartedEventListener implements
         try {
 
             //multipleJoinBuilderExample.executeExample();
-            criteriaQueryMaxPeriodExample.executeExample();
+            //criteriaQueryMaxPeriodExample.executeExample();
 
-        } catch (ParseException e) {
+            lazyLoadExample.lazyLoadTest();
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
