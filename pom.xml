@@ -80,7 +80,7 @@
 				</dependencies>
 			</plugin>
 
-
+          <!--
           <plugin>
                 <groupId>org.bsc.maven</groupId>
                 <artifactId>maven-processor-plugin</artifactId>
@@ -108,7 +108,8 @@
                     </dependency>
                 </dependencies>
             </plugin>
-
+            -->
+            
 		</plugins>
 	</build>
 

@@ -8,11 +8,11 @@ import javax.persistence.metamodel.StaticMetamodel;
 @StaticMetamodel(Order.class)
 public abstract class Order_ {
 
-	public static volatile SingularAttribute<Order, Long> id;
 	public static volatile SingularAttribute<Order, Date> createdAt;
+	public static volatile SingularAttribute<Order, Integer> hoursMax;
+	public static volatile SingularAttribute<Order, Long> id;
 	public static volatile SingularAttribute<Order, BigDecimal> value;
 	public static volatile SingularAttribute<Order, Date> createSinceLimitHours;
-	public static volatile SingularAttribute<Order, Integer> hoursMax;
 
 }
 
