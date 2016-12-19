@@ -8,6 +8,7 @@ public abstract class StudentAddress_ {
 
 	public static volatile SingularAttribute<StudentAddress, Long> studentId;
 	public static volatile SingularAttribute<StudentAddress, Student> student;
+	public static volatile SingularAttribute<StudentAddress, Long> studentId;
 	public static volatile SingularAttribute<StudentAddress, String> addressLine1;
 	public static volatile SingularAttribute<StudentAddress, Long> id;
 
